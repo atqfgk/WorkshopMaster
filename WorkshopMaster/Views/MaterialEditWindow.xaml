@@ -1,0 +1,98 @@
+﻿<Window x:Class="WorkshopMaster.Views.MaterialEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WorkshopMaster.Views"
+        mc:Ignorable="d"
+        Title="Редактирование материала" Height="500" Width="450" WindowStartupLocation="CenterOwner">
+    <!--<Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Название:" Margin="0,5"/>
+        <TextBox x:Name="txtName" Grid.Row="1" Margin="0,5"/>
+        <TextBlock Grid.Row="2" Text="Категория:" Margin="0,5"/>
+        <TextBox x:Name="txtCategory" Grid.Row="3" Margin="0,5"/>
+        <TextBlock Grid.Row="4" Text="Единица измерения:" Margin="0,5"/>
+        <TextBox x:Name="txtUnit" Grid.Row="5" Margin="0,5"/>
+        <TextBlock Grid.Row="6" Text="Цена закупки:" Margin="0,5"/>
+        <TextBox x:Name="txtPurchasePrice" Grid.Row="7" Margin="0,5" Text="0"/>
+        <TextBlock Grid.Row="8" Text="Цена продажи:" Margin="0,5"/>
+        <TextBox x:Name="txtSellingPrice" Grid.Row="9" Margin="0,5" Text="0"/>
+        <TextBlock Grid.Row="10" Text="Текущий остаток:" Margin="0,5"/>
+        <TextBox x:Name="txtCurrentStock" Grid.Row="11" Margin="0,5" Text="0"/>
+        <TextBlock Grid.Row="12" Text="Минимальный остаток:" Margin="0,5"/>
+        <TextBox x:Name="txtMinStock" Grid.Row="13" Margin="0,5" Text="0"/>
+        <StackPanel Grid.Row="14" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+            <Button Content="Сохранить" Click="Save_Click" Width="80" Margin="5"/>
+            <Button Content="Отмена" Click="Cancel_Click" Width="80" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>-->
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <!-- Основное содержимое занимает всё доступное пространство -->
+            <RowDefinition Height="*"/>
+            <!-- Кнопки фиксированной высоты внизу -->
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Прокручиваемая область для полей формы -->
+        <ScrollViewer Grid.Row="0" VerticalScrollBarVisibility="Auto">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Text="Название:" Margin="0,5"/>
+                <TextBox x:Name="txtName" Grid.Row="1" Margin="0,5"/>
+
+                <TextBlock Grid.Row="2" Text="Категория:" Margin="0,5"/>
+                <TextBox x:Name="txtCategory" Grid.Row="3" Margin="0,5"/>
+
+                <TextBlock Grid.Row="4" Text="Единица измерения:" Margin="0,5"/>
+                <TextBox x:Name="txtUnit" Grid.Row="5" Margin="0,5"/>
+
+                <TextBlock Grid.Row="6" Text="Цена закупки:" Margin="0,5"/>
+                <TextBox x:Name="txtPurchasePrice" Grid.Row="7" Margin="0,5" Text="0"/>
+
+                <TextBlock Grid.Row="8" Text="Цена продажи:" Margin="0,5"/>
+                <TextBox x:Name="txtSellingPrice" Grid.Row="9" Margin="0,5" Text="0"/>
+
+                <TextBlock Grid.Row="10" Text="Текущий остаток:" Margin="0,5"/>
+                <TextBox x:Name="txtCurrentStock" Grid.Row="11" Margin="0,5" Text="0"/>
+
+                <TextBlock Grid.Row="12" Text="Минимальный остаток:" Margin="0,5"/>
+                <TextBox x:Name="txtMinStock" Grid.Row="13" Margin="0,5" Text="0"/>
+            </Grid>
+        </ScrollViewer>
+
+        <!-- Панель кнопок внизу окна -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+            <Button Content="Сохранить" Click="Save_Click" Width="80" Margin="5,0"/>
+            <Button Content="Отмена" Click="Cancel_Click" Width="80" Margin="5,0"/>
+        </StackPanel>
+    </Grid>
+</Window>

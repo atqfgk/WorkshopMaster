@@ -1,0 +1,60 @@
+﻿<Window x:Class="WorkshopMaster.Views.AddMaterialToOrderDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WorkshopMaster.Views"
+        mc:Ignorable="d"
+        Title="Добавить материал" Height="180" Width="400" WindowStartupLocation="CenterOwner">
+    <!--<Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="5">
+            <TextBlock Text="Материал:" Width="80"/>
+            <ComboBox x:Name="cmbMaterial" Width="200"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="5">
+            <TextBlock Text="Количество:" Width="80"/>
+            <TextBox x:Name="txtQuantity" Width="100" Text="0"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+            <Button Content="ОК" Click="Ok_Click" Width="60" Margin="5"/>
+            <Button Content="Отмена" Click="Cancel_Click" Width="60" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>-->
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <!-- Основное содержимое формы -->
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <!-- Пружинящий промежуток, который прижмёт кнопки вниз -->
+            <RowDefinition Height="*"/>
+            <!-- Строка для кнопок -->
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Поле выбора материала -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="5">
+            <TextBlock Text="Материал:" Width="80" VerticalAlignment="Center"/>
+            <ComboBox x:Name="cmbMaterial" Width="200"/>
+        </StackPanel>
+
+        <!-- Поле ввода количества -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="5">
+            <TextBlock Text="Количество:" Width="80" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtQuantity" Width="100" Text="0"/>
+        </StackPanel>
+
+        <!-- Пружинящий элемент (пустая строка с Height="*") -->
+
+        <!-- Панель кнопок внизу -->
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+            <Button Content="ОК" Click="Ok_Click" Width="60" Margin="5,0"/>
+            <Button Content="Отмена" Click="Cancel_Click" Width="60" Margin="5,0"/>
+        </StackPanel>
+    </Grid>
+</Window>

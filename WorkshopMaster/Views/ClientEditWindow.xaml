@@ -1,0 +1,34 @@
+﻿<Window x:Class="WorkshopMaster.Views.ClientEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WorkshopMaster.Views"
+        mc:Ignorable="d"
+        Title="Редактирование клиента" Height="350" Width="400" WindowStartupLocation="CenterOwner">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="ФИО:" Margin="0,5"/>
+        <TextBox x:Name="txtFIO" Grid.Row="1" Margin="0,5"/>
+        <TextBlock Grid.Row="2" Text="Телефон:" Margin="0,5"/>
+        <TextBox x:Name="txtPhone" Grid.Row="3" Margin="0,5"/>
+        <TextBlock Grid.Row="4" Text="Email:" Margin="0,5"/>
+        <TextBox x:Name="txtEmail" Grid.Row="5" Margin="0,5"/>
+        <TextBlock Grid.Row="6" Text="Адрес доставки:" Margin="0,5"/>
+        <TextBox x:Name="txtAddress" Grid.Row="7" Margin="0,5" Height="60" TextWrapping="Wrap"/>
+        <StackPanel Grid.Row="8" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+            <Button Content="Сохранить" Click="BtnSave_Click"/>
+            <Button Content="Отмена" Click="BtnCancel_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

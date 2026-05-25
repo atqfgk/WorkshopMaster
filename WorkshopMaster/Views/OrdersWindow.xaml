@@ -1,0 +1,46 @@
+﻿<Window x:Class="WorkshopMaster.Views.OrdersWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WorkshopMaster.Views"
+        mc:Ignorable="d"
+        Title="Заказы" Height="450" Width="800" WindowStartupLocation="CenterOwner">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0,0,0,10" Grid.ColumnSpan="2">
+            <TextBlock Text="Статус:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+            <ComboBox x:Name="cmbStatus" Width="120" SelectionChanged="CmbStatus_SelectionChanged">
+                <ComboBoxItem>Все</ComboBoxItem>
+                <ComboBoxItem>черновик</ComboBoxItem>
+                <ComboBoxItem>утверждён</ComboBoxItem>
+                <ComboBoxItem>в_работе</ComboBoxItem>
+                <ComboBoxItem>выполнен</ComboBoxItem>
+                <ComboBoxItem>закрыт</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+        <DataGrid x:Name="dgOrders" Grid.Row="2" AutoGenerateColumns="False" IsReadOnly="True" Grid.ColumnSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="№ заказа" Binding="{Binding НомерЗаказа}" Width="100"/>
+                <DataGridTextColumn Header="Клиент" Binding="{Binding Клиент}" Width="150"/>
+                <DataGridTextColumn Header="Дата приёма" Binding="{Binding ДатаПриема}" Width="100"/>
+                <DataGridTextColumn Header="Плановая дата" Binding="{Binding ДатаИсполненияПлан}" Width="100"/>
+                <DataGridTextColumn Header="Статус" Binding="{Binding Статус}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0" Grid.ColumnSpan="2">
+            <Button x:Name="btnCreateOrder" Content="Создать" Click="BtnCreateOrder_Click"/>
+            <Button Content="Открыть" Click="BtnOpenOrder_Click"/>
+            <Button Content="Закрыть" Click="BtnClose_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
